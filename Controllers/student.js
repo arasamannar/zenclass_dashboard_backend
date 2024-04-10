@@ -200,6 +200,8 @@ const forgotPassword = async (req, res) => {
         user: EMAIL_ADDRESS,
         pass: EMAIL_PASSWORD,
       },
+      logger: true, // Enable logging
+      debug: true // Include SMTP traffic in the logs
     });
 
     const sendMail = async () => {
