@@ -95,7 +95,6 @@ const updateStudent = async (req, res) => {
       contactNo,
       qualification,
       experience,
-      password,
     } = req.body;
 
     const matchedStudent = await Student.findOne({ email });
@@ -116,7 +115,6 @@ const updateStudent = async (req, res) => {
     matchedStudent.contactNo = contactNo;
     matchedStudent.qualification = qualification;
     matchedStudent.experience = experience;
-    matchedStudent.password = hashedPassword;
 
     await Student.findByIdAndUpdate(matchedStudent.id, matchedStudent);
 

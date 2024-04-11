@@ -12,7 +12,7 @@ const studentSchema = new mongoose.Schema({
   },
   batch: {
     type: String,
-    default: "B47-WD2 Tamil",
+    default: "B52-WD Tamil",
   },
   contactNo: {
     type: String,
