@@ -18,6 +18,7 @@ const capstoneRouter = require("./Routes/capstoneRoutes");
 const webcodeRouter = require("./Routes/webcodeRoutes");
 const queryRouter = require("./Routes/queryRoutes");
 const mockRouter = require("./Routes/mockRoutes");
+const seedMentor = require("./Model/demoMentorSeed");
 
 app.use(express.json());
 app.use(cors());
@@ -28,6 +29,7 @@ mongoose
   .connect(URL)
   .then(() => {
     console.log("connected to Mongo DB");
+    seedMentor();
   })
   .catch((err) => {
     console.error(err);
